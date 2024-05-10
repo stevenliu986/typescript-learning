@@ -1,4 +1,4 @@
-export class TodoItems {
+export class TodoItem {
     id: number;
     task: string;
     complete = false;
