@@ -22,6 +22,7 @@ function displayTodoList(): void {
 
 enum Commands {
   Quit = "Quit",
+  Toggle = "Show/Hide Completed",
 }
 
 function promptUser(): void {
@@ -35,8 +36,11 @@ function promptUser(): void {
       choices: Object.values(Commands),
     })
     .then((answers) => {
-      if (answers["command"] !== Commands.Quit) {
-        promptUser();
+      switch (answers["command"]) {
+        case Commands.Toggle:
+          showCompleted = !showCompleted;
+          promptUser();
+          break;
       }
     });
 }
