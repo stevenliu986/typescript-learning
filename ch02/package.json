@@ -7,5 +7,6 @@
   },
   "author": "Steven Liu",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "type": "module"
 }
