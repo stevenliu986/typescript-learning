@@ -1,6 +1,6 @@
 import { TodoItem } from "./todoItem.js";
 import { TodoCollection } from "./todoCollection.js";
-import inquier from "inquirer";
+import inquirer from "inquirer";
 
 let todos: TodoItem[] = [
   new TodoItem(1, "Buy Flowers"),
@@ -28,7 +28,7 @@ enum Commands {
 function promptUser(): void {
   console.clear();
   displayTodoList();
-  inquier
+  inquirer
     .prompt({
       type: "list",
       name: "command",
