@@ -10,13 +10,14 @@ let todos: TodoItem[] = [
 ];
 
 let collection: TodoCollection = new TodoCollection("Steven", todos);
+let showCompleted = true;
 
 function displayTodoList(): void {
   console.log(
     `${collection.userName}'s Todo List` +
       `(${collection.getItemCounts().incomplete} items to do)`,
   );
-  collection.getTodoItems(true).forEach((item) => item.printDetails());
+  collection.getTodoItems(showCompleted).forEach((item) => item.printDetails());
 }
 
 enum Commands {
