@@ -6,4 +6,4 @@ function printMessage(msg: string): void {
 
 printMessage("Hello, TypeScript");
 let total = sum(100,200,300);
-console.log(total);
+console.log(`Total: ${total}`);
